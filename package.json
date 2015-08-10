@@ -2,8 +2,7 @@
   "name": "django-boilerplate",
   "version": "0.0.1",
   "description": "Django Boilerplate",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tomijarvi/django-boilerplate.git"
@@ -17,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/tomijarvi/django-boilerplate/issues"
   },
-  "homepage": "https://github.com/tomijarvi/django-boilerplate#readme"
+  "homepage": "https://github.com/tomijarvi/django-boilerplate#readme",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "gulp": "^3.9.0"
+  }
 }
