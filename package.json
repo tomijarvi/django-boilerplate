@@ -1,0 +1,21 @@
+{
+  "name": "django-boilerplate",
+  "version": "0.0.1",
+  "description": "Django Boilerplate",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomijarvi/django-boilerplate.git"
+  },
+  "keywords": [
+    "Django",
+    "Boilerplate"
+  ],
+  "author": "Tomi Järvi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomijarvi/django-boilerplate/issues"
+  },
+  "homepage": "https://github.com/tomijarvi/django-boilerplate#readme"
+}
