@@ -22,8 +22,13 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-bower-src": "^0.1.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^3.0.0",
     "gulp-jsmin": "^0.1.5",
-    "gulp-uglify": "^1.2.0"
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "main-bower-files": "^2.9.0"
   }
 }

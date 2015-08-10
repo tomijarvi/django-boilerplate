@@ -1,6 +1,35 @@
+// Variables
+var debug = false;
+var dest = 'dist/';
+
+// Gulp
 var gulp = require('gulp');
-var jsmin = require('gulp-jsmin');
-var rename = require('gulp-rename');
-var filter = require('gulp-filter');
-var bowerSrc = require('gulp-bower-src');
-var uglify = require('gulp-uglify');
+
+var plugins = require("gulp-load-plugins")({
+    pattern: ['gulp-*', 'gulp.*', 'main-bower-files'],
+    replaceString: /\bgulp[\-.]/
+});
+
+gulp.task('clean-all', function() {
+    gulp.src(dest)
+        .pipe(plugins.clean());
+});
+
+gulp.task('default', ['clean-all'], function () {
+    gulp.src(plugins.mainBowerFiles())
+        .pipe(plugins.filter('*.js'))
+        .pipe(plugins.concat('main.js'))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(dest + 'js'));
+});
+
+gulp.task('debug', ['clean-all'], function () {
+    gulp.src(plugins.mainBowerFiles())
+        .pipe(plugins.filter('*.js'))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(dest + 'js'));
+});
+
+gulp.task('watch', function () {
+
+});
