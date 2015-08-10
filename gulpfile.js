@@ -15,6 +15,11 @@ gulp.task('clean-all', function() {
         .pipe(plugins.clean());
 });
 
+gulp.task('bower', function() {
+    plugins.bower()
+    .pipe(gulp.dest('lib/'))
+});
+
 gulp.task('default', ['clean-all'], function () {
     gulp.src(plugins.mainBowerFiles())
         .pipe(plugins.filter('*.js'))
