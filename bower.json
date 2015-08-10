@@ -1,0 +1,24 @@
+{
+  "name": "django-boilerplate",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tomijarvi/django-boilerplate",
+  "authors": [
+    "Tomi Järvi <tomi@jarvi.pro>"
+  ],
+  "description": "Django boilerplate",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Django",
+    "Boilerplate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

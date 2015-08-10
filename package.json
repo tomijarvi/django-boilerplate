@@ -11,7 +11,7 @@
     "Django",
     "Boilerplate"
   ],
-  "author": "Tomi Järvi",
+  "author": "Tomi Järvi <tomi@jarvi.pro>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tomijarvi/django-boilerplate/issues"
