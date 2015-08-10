@@ -1,0 +1,4 @@
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+SECRET_KEY = 'gmoiu$zxw4*z=ky_$2*=o#prbdx-!-gjpvq37m)9t&094##)9i'
