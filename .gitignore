@@ -2,6 +2,7 @@
 # Boilerplate
 #
 static/
+tmp/
 
 #
 # Python
