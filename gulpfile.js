@@ -71,9 +71,8 @@ gulp.task('build-vendor-js', ['clean-temp'], function() {
     }
 })
 
-gulp.task('copy-vendor-font', function() {
-    return gulp.src(plugins.mainBowerFiles())
-            .pipe(plugins.filter('**/*.{eot,svg,ttf,woff}'))
+gulp.task('copy-vendor-font', ['clean-temp'], function() {
+    return gulp.src('bower_components/**/*.{eot,svg,ttf,woff}')
             .pipe(plugins.flatten())
             .pipe(gulp.dest('./tmp/fonts'))
 })
