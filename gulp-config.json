@@ -1,21 +1,22 @@
 {
     "paths": {
-        "build": "static"
+        "temp": "tmp",
+        "build": "static",
         "javascript": {
-            src: "src/js/**/*",
-            dest: "tmp/js"
+            "src": "src/js/**/*",
+            "dest": "tmp/js"
         },
         "css": {
-            src: "src/css/**/*",
-            dest: "tmp/css"
+            "src": "src/css/**/*",
+            "dest": "tmp/css"
         },
-        img: {
-            src: "src/img/**/*",
-            dest: "static/img"
+        "img": {
+            "src": "src/img/**/*",
+            "dest": "static/img"
         },
-        fonts: {
-            src: "src/fonts/**/*",
-            dest: "static/fonts"
+        "fonts": {
+            "src": "src/fonts/**/*",
+            "dest": "static/fonts"
         }
     }
 }

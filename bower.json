@@ -29,7 +29,7 @@
   "overrides": {
     "bootstrap": {
       "main": [
-        "less/!(variables).less", "dist/fonts/*", "dist/js/*"
+        "dist/fonts/*", "dist/js/*"
       ]
     }
   }

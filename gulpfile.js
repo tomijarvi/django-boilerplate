@@ -9,7 +9,7 @@ var config = require('./gulp-config.json');
 var gulp = require('gulp')
 
 var plugins = require("gulp-load-plugins")({
-    pattern: ['gulp-*', 'gulp.*', 'main-bower-files', 'bower-main', 'merge2'],
+    pattern: ['gulp-*', 'gulp.*', 'main-bower-files', 'bower-main', 'del', 'merge2'],
     replaceString: /\bgulp[\-.]/
 })
 
@@ -17,7 +17,10 @@ var bowerMainJavaScriptFiles = plugins.bowerMain('js','min.js')
 
 // Bower
 gulp.task('bower', function() {
-    return plugins.bower()
+    return gulp.src(plugins.mainBowerFiles())
+        .pipe(plugins.debug({title: "Bower"}))
+
+    //return plugins.bower()
 })
 
 // Clean
@@ -25,8 +28,7 @@ gulp.task('clean-all', ['clean-temp', 'clean-static', 'clean-inject'], function(
 })
 
 gulp.task('clean-temp', function() {
-    return gulp.src('./tmp')
-        .pipe(plugins.clean({force: true}))
+    return plugins.del(config.paths.temp)
 })
 
 gulp.task('clean-static', function() {
@@ -74,11 +76,13 @@ gulp.task('build-vendor-js', ['clean-temp'], function() {
     }
 })
 
-gulp.task('copy-font', ['clean-temp'], function() {
-    fontFiles = ['bower_components/**/*.{eot,svg,ttf,woff}', './src/fonts/**/*.*']
+gulp.task('copy:fonts', ['clean-temp'], function() {
+    fontFiles = [config.paths.fonts.src]
+    fontFiles = fontFiles.concat(plugins.mainBowerFiles('**/*.{eot,svg,ttf,woff}'))
     return gulp.src(fontFiles)
+            .pipe(plugins.debug({title: "fonts"}))
             .pipe(plugins.flatten())
-            .pipe(gulp.dest('./tmp/fonts'))
+            .pipe(gulp.dest(config.paths.fonts.dest))
 })
 
 gulp.task('copy-static', ['build-js', 'copy-vendor-font'], function() {
