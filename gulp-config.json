@@ -1,0 +1,21 @@
+{
+    "paths": {
+        "build": "static"
+        "javascript": {
+            src: "src/js/**/*",
+            dest: "tmp/js"
+        },
+        "css": {
+            src: "src/css/**/*",
+            dest: "tmp/css"
+        },
+        img: {
+            src: "src/img/**/*",
+            dest: "static/img"
+        },
+        fonts: {
+            src: "src/fonts/**/*",
+            dest: "static/fonts"
+        }
+    }
+}

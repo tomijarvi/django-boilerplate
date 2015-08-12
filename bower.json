@@ -25,5 +25,12 @@
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.5"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/!(variables).less", "dist/fonts/*", "dist/js/*"
+      ]
+    }
+  }
 }

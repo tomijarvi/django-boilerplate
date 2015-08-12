@@ -2,6 +2,9 @@
 var debug = false
 var templates = 'templates/'
 
+// Dirs
+var config = require('./gulp-config.json');
+
 // Gulp
 var gulp = require('gulp')
 
@@ -71,8 +74,9 @@ gulp.task('build-vendor-js', ['clean-temp'], function() {
     }
 })
 
-gulp.task('copy-vendor-font', ['clean-temp'], function() {
-    return gulp.src('bower_components/**/*.{eot,svg,ttf,woff}')
+gulp.task('copy-font', ['clean-temp'], function() {
+    fontFiles = ['bower_components/**/*.{eot,svg,ttf,woff}', './src/fonts/**/*.*']
+    return gulp.src(fontFiles)
             .pipe(plugins.flatten())
             .pipe(gulp.dest('./tmp/fonts'))
 })
